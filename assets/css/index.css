@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+nav,
+footer {
+  background-color: #006400;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    ".       center-left  center-right  right-top"
+    "left-bottom center-left  center-right  right-bottom";
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  min-height: calc(100% - 60px);
+  height: auto;
+  padding: 1rem;
+  background-color: whitesmoke;
+}
+
+fieldset {
+  padding: 1rem;
+  border: 2px solid #ccc;
+}
+
+#left-bottom {
+  grid-area: left-bottom;
+  align-self: end;
+}
+
+#center-left {
+  grid-area: center-left;
+}
+
+#center-right {
+  grid-area: center-right;
+}
+
+#right-top {
+  grid-area: right-top;
+}
+
+#right-bottom {
+  grid-area: right-bottom;
+  align-self: end;
+}
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 0;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+summary {
+  cursor: pointer;
+  padding: 12px 16px;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 8px;
+  list-style: none;
+  transition: background-color 0.3s ease;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+}
+
+div ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+div li {
+  background-color: #f0f0f0;
+  margin-bottom: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.div-train li::before {
+  content: "🏋️ ";
+  margin-right: 8px;
+}
+
+.div-diet li::before {
+  content: "🥦 ";
+  margin-right: 8px;
+}
+div h3 {
+  font-size: 1.2rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+  font-weight: 600;
+  border-left: 4px solid #3949ab;
+  padding-left: 10px;
+}
+
+div h2 {
+  color: rgb(142, 52, 52);
+  border-left: 4px solid rgb(191, 82, 82);
+  padding-left: 10px;
+  margin-top: 1.2rem;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 1.2rem;
+  background-color: #6eaa5e;
+  border-radius: 8px;
+}
+
+button::before {
+  content: "✅";
+  margin-right: 8px;
+}
+
+.checked {
+  background-color: #b7e4c7;
+}
