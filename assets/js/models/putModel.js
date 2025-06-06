@@ -40,6 +40,9 @@ class PutClass {
 
     putMyAccountData(user, divQuerry) {
         const div = document.querySelector(divQuerry);
+        if (!user) {
+            return alert("Você não esta logado")
+        }
         div.innerHTML = `   
                 <h2>${user.nome}</h2>
                 <p><strong>Idade:</strong>${user.idade}</p>

@@ -1,14 +1,13 @@
 import { Bd } from "./bd.js";
 
 class UserBd {
-    constructor(nome, idade, peso, altura, fotoDePerfil) {
+    constructor(nome, idade, peso, altura) {
         this.nome = nome;
         this.idade = idade;
         this.peso = peso;
         this.altura = altura;
         this.diasCompletos = 0;
-        this.imc = Math.floor(peso / (altura * altura));
-        this.fotoDePerfil = fotoDePerfil;
+        this.imc = (peso / (altura * altura)).toFixed();
     }
 
     get contarDiasCompletos() {
@@ -17,4 +16,4 @@ class UserBd {
 
 }
 
-export const newUser = new UserBd('Pedro', 17, 64, 1.70, 'xxxxx');
+export default UserBd
