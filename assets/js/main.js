@@ -5,8 +5,7 @@ import { checkDiet, checkTrain } from './functions/buttonFuntions.js';
 putItems.init();
 
 results.putResults();
-const userData = JSON.parse(localStorage.getItem('usuario'));
 const btnCheckTrain = document.querySelector('#bt-train');
 const btnCheckDiet = document.querySelector('#bt-diet');
-btnCheckTrain.addEventListener('click', () => checkTrain(userData));
+btnCheckTrain.addEventListener('click', () => checkTrain());
 btnCheckDiet.addEventListener('click', () => checkDiet());

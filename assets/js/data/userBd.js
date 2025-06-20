@@ -1,5 +1,3 @@
-import { Bd } from "./bd.js";
-
 class UserBd {
     constructor(nome, idade, peso, altura) {
         this.nome = nome;

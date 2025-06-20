@@ -2,7 +2,7 @@ import { putItems } from "../models/putModel.js";
 import { results } from "../models/resultsModel.js";
 import { bd } from "../data/bd.js";
 
-export function checkTrain(user) {
+export function checkTrain() {
     for (let el of bd.dataTrain) {
         if (el.check) {
             continue;
@@ -14,7 +14,6 @@ export function checkTrain(user) {
     }
     results.putResults();
     putItems.putTrainItems();
-    newUser.diasCompletos++;
 }
 
 export function checkDiet() {
